@@ -1,0 +1,49 @@
+[tool.briefcase]
+project_name = "Gym Selector"
+bundle = "com.gymselector"
+version = "0.0.1"
+url = "https://gymselector.com/gymselector"
+license = "BSD license"
+author = 'Luis Palacios'
+author_email = "lp@luispal.com"
+
+[tool.briefcase.app.gymselector]
+formal_name = "Gym Selector"
+description = "Random climbing gym selector"
+icon = "src/gymselector/resources/gymselector"
+sources = ['src/gymselector']
+requires = []
+
+
+[tool.briefcase.app.gymselector.macOS]
+requires = [
+    'toga-cocoa>=0.3.0.dev20',
+]
+
+[tool.briefcase.app.gymselector.linux]
+requires = [
+    'toga-gtk>=0.3.0.dev20',
+]
+system_requires = [
+    'libgirepository1.0-dev',
+    'libcairo2-dev',
+    'libpango1.0-dev',
+    'libwebkitgtk-3.0-0',
+    'gir1.2-webkit-3.0',
+]
+
+[tool.briefcase.app.gymselector.windows]
+requires = [
+    'toga-winforms>=0.3.0.dev20',
+]
+
+# Mobile deployments
+[tool.briefcase.app.gymselector.iOS]
+requires = [
+    'toga-iOS>=0.3.0.dev20',
+]
+
+[tool.briefcase.app.gymselector.android]
+requires = [
+    'toga-android>=0.3.0.dev20',
+]
